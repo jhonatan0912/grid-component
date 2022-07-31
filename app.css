@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --third: hsl(179, 47%, 52%, .6);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  background-color: var(--Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.first__box {
+  background-color: white;
+  padding: 1em;
+  border-radius: 5px 5px 0 0;
+}
+
+.first__title {
+  color: var(--Cyan);
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.first__paragraph {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+}
+
+.first__paragraph2 {
+  color: var(--Grayish-Blue);
+}
+
+.second__box {
+  background-color: var(--Cyan);
+  color: var(--Light-Gray);
+  padding: 1em;
+}
+
+.second__title {
+  font-weight: 700;
+}
+
+.second__paragraph {
+  color: var(--Light-Gray);
+}
+
+.price {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.btn__login {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  background-color: var(--Bright-Yellow);
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.third__box {
+  background-color: var(--third);
+  color: var(--Light-Gray);
+  padding: 1em;
+  border-radius: 0 0 5px 5px;
+}
+
+.third__title {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+@media screen and (min-width:1440px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "first first"
+      "second third";
+    width: 40%;
+  }
+
+  .first__box {
+    grid-area: first;
+  }
+
+  .second__box {
+    grid-area: second;
+    border-radius: 0 0 0 5px;
+    padding: 1em 2em;
+  }
+
+  .third__box {
+    grid-area: third;
+    border-radius: 0 0 5px 0;
+    padding: 1em 2em;
+  }
+}
